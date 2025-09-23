@@ -1,0 +1,28 @@
+{
+  "name": "Christian Klint M. Labadia",
+  "profileImage": "../img/group_profile.jpg",
+  "hasPhoto": true,
+  "positions": [
+    {
+      "title": "Junior Child",
+      "startDate": "March 08, 1998",
+      "type": "start"
+    },
+    {
+      "title": "Elementary Intern",
+      "startDate": "June 01, 2009",
+      "type": "intermediate"
+    },
+    {
+      "title": "Intern",
+      "startDate": "August 2012",
+      "type": "intermediate"
+    },
+    {
+      "title": "Programming Officer",
+      "startDate": "April 01, 2024",
+      "endDate": "September 09, 2025",
+      "type": "final"
+    }
+  ]
+}

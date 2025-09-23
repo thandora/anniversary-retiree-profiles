@@ -1,0 +1,114 @@
+import { useState } from "react";
+import retireeData from './data/retireeData.json';
+import { calculateServiceDuration, formatServiceDuration } from './utils/dateUtils';
+import { sparklePositions } from './constants/sparklePositions';
+import Sparkle from './components/Sparkle';
+import EventHeader from './components/EventHeader';
+import ServiceDurationCard from './components/ServiceDurationCard';
+import CareerTimeline from './components/CareerTimeline';
+import AnniversaryInvitation from './components/AnniversaryInvitation';
+import ImageModal from './components/ImageModal';
+import ProfileAvatar from './components/ProfileAvatar';
+
+function RetireeProfile() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const serviceDuration = calculateServiceDuration(
+    retireeData.positions[0].startDate,
+    retireeData.positions[retireeData.positions.length - 1].endDate
+  );
+  const serviceDurationText = formatServiceDuration(serviceDuration);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
+      {sparklePositions.map((position, index) => (
+        <Sparkle key={index} style={position} />
+      ))}
+
+      <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-yellow-400/20 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-yellow-600/10 to-transparent rounded-full blur-3xl"></div>
+
+      <div className="relative z-10 px-4 py-8">
+        <EventHeader />
+
+        <div className="max-w-sm mx-auto">
+          <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/20 shadow-2xl overflow-hidden">
+            <div className="absolute inset-0 opacity-25">
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(250, 204, 21, 0.2) 15px, rgba(250, 204, 21, 0.2) 16px)`,
+                }}
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `radial-gradient(circle at 25px 25px, rgba(250, 204, 21, 0.25) 1.5px, transparent 1.5px)`,
+                  backgroundSize: "50px 50px",
+                }}
+              />
+            </div>
+
+            <div className="absolute top-4 right-4 w-8 h-8 border border-yellow-400/10 rounded-full opacity-60" />
+            <div className="absolute bottom-8 left-4 w-4 h-4 bg-yellow-400/10 rounded-sm rotate-45 animate-pulse" style={{ animationDelay: "1s" }} />
+            <div className="absolute top-1/3 right-8 w-2 h-8 bg-gradient-to-b from-yellow-400/10 to-transparent rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
+
+            <div className="relative z-10">
+              <div className="text-center mb-2">
+                <ProfileAvatar
+                  name={retireeData.name}
+                  profileImage={retireeData.profileImage}
+                  hasPhoto={retireeData.hasPhoto}
+                  onImageClick={() => setIsModalOpen(true)}
+                />
+              </div>
+
+              <h2 className="text-3xl font-bold text-white text-center mb-3 tracking-wide leading-tight">
+                {retireeData.name}
+              </h2>
+
+              <ServiceDurationCard serviceDurationText={serviceDurationText} />
+              <CareerTimeline positions={retireeData.positions} />
+
+              <div className="mt-8 text-center">
+                <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mx-auto mb-4" />
+                <p className="text-gray-300 text-base leading-relaxed">
+                  Thank you for your unwavering dedication to{" "}
+                  <span className="whitespace-nowrap">LEYECO II</span>. Your{" "}
+                  <span className="text-yellow-400">
+                    {serviceDurationText.toLowerCase()}
+                  </span>{" "}
+                  of service have been invaluable to our success, illuminating
+                  the path forward and embodying the values that define who we
+                  are.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <AnniversaryInvitation />
+
+        <div className="text-center mt-12">
+          <div className="text-yellow-400 text-xl font-bold tracking-widest">
+            LEYECO II
+          </div>
+          <div className="text-gray-400 text-xs tracking-wider mt-1">
+            50TH ANNIVERSARY
+          </div>
+        </div>
+
+        {retireeData.hasPhoto && (
+          <ImageModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            imageSrc={retireeData.profileImage}
+            altText={retireeData.name}
+          />
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default RetireeProfile;
