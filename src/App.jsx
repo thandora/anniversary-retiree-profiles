@@ -1,6 +1,6 @@
-import { useState } from "react";
-import retireeData from './data/retireeData.json';
+import { useState, useEffect } from "react";
 import { calculateServiceDuration, formatServiceDuration } from './utils/dateUtils';
+import { getQueryParam, loadRetireeData } from './utils/routing';
 import { sparklePositions } from './constants/sparklePositions';
 import Sparkle from './components/Sparkle';
 import EventHeader from './components/EventHeader';
@@ -9,9 +9,68 @@ import CareerTimeline from './components/CareerTimeline';
 import AnniversaryInvitation from './components/AnniversaryInvitation';
 import ImageModal from './components/ImageModal';
 import ProfileAvatar from './components/ProfileAvatar';
+import ProfileSelector from './components/ProfileSelector';
 
 function RetireeProfile() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [retireeData, setRetireeData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const profileId = getQueryParam('profile');
+
+    if (!profileId) {
+      setLoading(false);
+      return;
+    }
+
+    loadRetireeData(profileId)
+      .then(data => {
+        setRetireeData(data);
+        setError(null);
+      })
+      .catch(err => {
+        setError(err.message);
+        setRetireeData(null);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+
+  if (!getQueryParam('profile')) {
+    return <ProfileSelector />;
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-red-400 text-xl mb-4">Profile Not Found</div>
+          <div className="text-gray-400 mb-6">{error}</div>
+          <button
+            onClick={() => window.location.href = window.location.pathname}
+            className="bg-yellow-400 text-black px-6 py-2 rounded-lg hover:bg-yellow-500 transition-colors"
+          >
+            Back to Profile Selection
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (!retireeData) {
+    return null;
+  }
 
   const serviceDuration = calculateServiceDuration(
     retireeData.positions[0].startDate,
@@ -54,18 +113,19 @@ function RetireeProfile() {
             <div className="absolute top-1/3 right-8 w-2 h-8 bg-gradient-to-b from-yellow-400/10 to-transparent rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
 
             <div className="relative z-10">
-              <div className="text-center mb-2">
-                <ProfileAvatar
-                  name={retireeData.name}
-                  profileImage={retireeData.profileImage}
-                  hasPhoto={retireeData.hasPhoto}
-                  onImageClick={() => setIsModalOpen(true)}
-                />
-              </div>
+              <ProfileAvatar
+                name={retireeData.name}
+                profileImage={retireeData.profileImage}
+                hasPhoto={retireeData.hasPhoto}
+                onImageClick={() => setIsModalOpen(true)}
+              />
 
-              <h2 className="text-3xl font-bold text-white text-center mb-3 tracking-wide leading-tight">
-                {retireeData.name}
-              </h2>
+              {/* Only show name heading for profiles with photos */}
+              {retireeData.hasPhoto && (
+                <h2 className="text-3xl font-bold text-white text-center mb-3 tracking-wide leading-tight">
+                  {retireeData.name}
+                </h2>
+              )}
 
               <ServiceDurationCard serviceDurationText={serviceDurationText} />
               <CareerTimeline positions={retireeData.positions} />

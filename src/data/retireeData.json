@@ -1,28 +1,119 @@
 {
-  "name": "Christian Klint M. Labadia",
-  "profileImage": "../img/group_profile.jpg",
-  "hasPhoto": true,
-  "positions": [
-    {
-      "title": "Junior Child",
-      "startDate": "March 08, 1998",
-      "type": "start"
-    },
-    {
-      "title": "Elementary Intern",
-      "startDate": "June 01, 2009",
-      "type": "intermediate"
-    },
-    {
-      "title": "Intern",
-      "startDate": "August 2012",
-      "type": "intermediate"
-    },
-    {
-      "title": "Programming Officer",
-      "startDate": "April 01, 2024",
-      "endDate": "September 09, 2025",
-      "type": "final"
-    }
-  ]
+  "christian-labadia": {
+    "name": "Christian Klint M. Labadia",
+    "profileImage": "../img/group_profile.jpg",
+    "hasPhoto": true,
+    "positions": [
+      {
+        "title": "Junior Child",
+        "startDate": "March 08, 1998",
+        "type": "start"
+      },
+      {
+        "title": "Elementary Intern",
+        "startDate": "June 01, 2009",
+        "type": "intermediate"
+      },
+      {
+        "title": "Intern",
+        "startDate": "August 2012",
+        "type": "intermediate"
+      },
+      {
+        "title": "Programming Officer",
+        "startDate": "April 01, 2024",
+        "endDate": "September 09, 2025",
+        "type": "final"
+      }
+    ]
+  },
+  "maria-santos": {
+    "name": "Maria Elena Santos",
+    "profileImage": "../img/maria_profile.jpg",
+    "hasPhoto": false,
+    "positions": [
+      {
+        "title": "Junior Clerk",
+        "startDate": "June 15, 1975",
+        "type": "start"
+      },
+      {
+        "title": "Administrative Assistant",
+        "startDate": "January 10, 1982",
+        "type": "intermediate"
+      },
+      {
+        "title": "Senior Administrative Officer",
+        "startDate": "March 03, 1995",
+        "type": "intermediate"
+      },
+      {
+        "title": "Operations Manager",
+        "startDate": "August 20, 2005",
+        "endDate": "December 31, 2024",
+        "type": "final"
+      }
+    ]
+  },
+  "robert-garcia": {
+    "name": "Robert P. Garcia",
+    "profileImage": "../img/robert_profile.jpg",
+    "hasPhoto": true,
+    "positions": [
+      {
+        "title": "Apprentice Lineman",
+        "startDate": "September 12, 1980",
+        "type": "start"
+      },
+      {
+        "title": "Lineman",
+        "startDate": "April 08, 1985",
+        "type": "intermediate"
+      },
+      {
+        "title": "Senior Lineman",
+        "startDate": "November 22, 1992",
+        "type": "intermediate"
+      },
+      {
+        "title": "Field Supervisor",
+        "startDate": "February 14, 2008",
+        "endDate": "June 30, 2025",
+        "type": "final"
+      }
+    ]
+  },
+  "ana-rodriguez": {
+    "name": "Ana Marie Rodriguez",
+    "profileImage": "../img/ana_profile.jpg",
+    "hasPhoto": true,
+    "positions": [
+      {
+        "title": "Accounting Clerk",
+        "startDate": "May 03, 1978",
+        "type": "start"
+      },
+      {
+        "title": "Junior Accountant",
+        "startDate": "July 15, 1983",
+        "type": "intermediate"
+      },
+      {
+        "title": "Senior Accountant",
+        "startDate": "January 12, 1990",
+        "type": "intermediate"
+      },
+      {
+        "title": "Finance Manager",
+        "startDate": "October 05, 2000",
+        "type": "intermediate"
+      },
+      {
+        "title": "Chief Financial Officer",
+        "startDate": "March 18, 2010",
+        "endDate": "August 15, 2025",
+        "type": "final"
+      }
+    ]
+  }
 }
