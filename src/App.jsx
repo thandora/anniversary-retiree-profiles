@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
-import { calculateServiceDuration, formatServiceDuration } from './utils/dateUtils';
-import { getQueryParam, loadRetireeData } from './utils/routing';
-import { sparklePositions } from './constants/sparklePositions';
-import Sparkle from './components/Sparkle';
-import EventHeader from './components/EventHeader';
-import ServiceDurationCard from './components/ServiceDurationCard';
-import CareerTimeline from './components/CareerTimeline';
-import AnniversaryInvitation from './components/AnniversaryInvitation';
-import ImageModal from './components/ImageModal';
-import ProfileAvatar from './components/ProfileAvatar';
-import ProfileSelector from './components/ProfileSelector';
+import {
+  calculateServiceDuration,
+  formatServiceDuration,
+} from "./utils/dateUtils";
+import { getQueryParam, loadRetireeData } from "./utils/routing";
+import { sparklePositions } from "./constants/sparklePositions";
+import Sparkle from "./components/Sparkle";
+import EventHeader from "./components/EventHeader";
+import ServiceDurationCard from "./components/ServiceDurationCard";
+import CareerTimeline from "./components/CareerTimeline";
+import AnniversaryInvitation from "./components/AnniversaryInvitation";
+import ImageModal from "./components/ImageModal";
+import ProfileAvatar from "./components/ProfileAvatar";
+import ProfileSelector from "./components/ProfileSelector";
 
 function RetireeProfile() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,7 +21,7 @@ function RetireeProfile() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const profileId = getQueryParam('profile');
+    const profileId = getQueryParam("profile");
 
     if (!profileId) {
       setLoading(false);
@@ -26,11 +29,11 @@ function RetireeProfile() {
     }
 
     loadRetireeData(profileId)
-      .then(data => {
+      .then((data) => {
         setRetireeData(data);
         setError(null);
       })
-      .catch(err => {
+      .catch((err) => {
         setError(err.message);
         setRetireeData(null);
       })
@@ -47,7 +50,7 @@ function RetireeProfile() {
     );
   }
 
-  if (!getQueryParam('profile')) {
+  if (!getQueryParam("profile")) {
     return <ProfileSelector />;
   }
 
@@ -58,7 +61,7 @@ function RetireeProfile() {
           <div className="text-red-400 text-xl mb-4">Profile Not Found</div>
           <div className="text-gray-400 mb-6">{error}</div>
           <button
-            onClick={() => window.location.href = window.location.pathname}
+            onClick={() => (window.location.href = window.location.pathname)}
             className="bg-yellow-400 text-black px-6 py-2 rounded-lg hover:bg-yellow-500 transition-colors"
           >
             Back to Profile Selection
@@ -109,8 +112,14 @@ function RetireeProfile() {
             </div>
 
             <div className="absolute top-4 right-4 w-8 h-8 border border-yellow-400/10 rounded-full opacity-60" />
-            <div className="absolute bottom-8 left-4 w-4 h-4 bg-yellow-400/10 rounded-sm rotate-45 animate-pulse" style={{ animationDelay: "1s" }} />
-            <div className="absolute top-1/3 right-8 w-2 h-8 bg-gradient-to-b from-yellow-400/10 to-transparent rounded-full animate-pulse" style={{ animationDelay: "2s" }} />
+            <div
+              className="absolute bottom-8 left-4 w-4 h-4 bg-yellow-400/10 rounded-sm rotate-45 animate-pulse"
+              style={{ animationDelay: "1s" }}
+            />
+            <div
+              className="absolute top-1/3 right-8 w-2 h-8 bg-gradient-to-b from-yellow-400/10 to-transparent rounded-full animate-pulse"
+              style={{ animationDelay: "2s" }}
+            />
 
             <div className="relative z-10">
               <ProfileAvatar
