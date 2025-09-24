@@ -93,7 +93,7 @@ function RetireeProfile() {
       <div className="relative z-10 px-4 py-8">
         <EventHeader />
 
-        <div className="max-w-sm mx-auto">
+        <div className="max-w-md mx-auto">
           <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/20 shadow-2xl overflow-hidden">
             <div className="absolute inset-0 opacity-25">
               <div

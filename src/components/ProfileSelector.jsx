@@ -12,8 +12,10 @@ function ProfileSelector() {
   }, []);
 
   const handleProfileSelect = (profileId) => {
-    setQueryParam("profile", profileId);
-    window.location.reload(); // Simple way to trigger re-render
+    const url = new URL(window.location);
+    url.searchParams.set("profile", profileId);
+    window.history.pushState({ profile: profileId }, '', url.toString());
+    window.location.reload(); // Trigger re-render for SPA
   };
 
   return (

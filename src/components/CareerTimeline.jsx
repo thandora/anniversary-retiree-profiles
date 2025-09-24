@@ -1,6 +1,25 @@
 import PropTypes from 'prop-types';
 
 function CareerTimeline({ positions }) {
+  const getLineHeight = (entryCount) => {
+    switch (entryCount) {
+      case 2:
+        return `calc(${(entryCount - 1) * 6}rem)`; // Works for 2 entries
+      case 3:
+        return `calc(${(entryCount - 1) * 6}rem - 0.75rem)`; // Adjusted for 3 entries
+      case 4:
+        return `calc(${(entryCount - 1) * 6}rem - 3rem)`; // Original calculation that worked for 4
+      case 5:
+        return `calc(${(entryCount - 1) * 6}rem - 3rem)`; // Same pattern as 4 entries
+      case 6:
+        return `calc(${(entryCount - 1) * 6}rem - 3rem)`; // Same pattern
+      case 7:
+        return `calc(${(entryCount - 1) * 6}rem - 3rem)`; // Same pattern
+      default:
+        return `calc(${(entryCount - 1) * 6}rem - 3rem)`;
+    }
+  };
+
   return (
     <div>
       <div className="text-center mb-6">
@@ -14,7 +33,7 @@ function CareerTimeline({ positions }) {
         <div
           className="absolute left-[5px] top-3 w-0.5 bg-gradient-to-b from-yellow-400 to-yellow-600 opacity-50"
           style={{
-            height: `calc(${(positions.length - 1) * 6}rem - 3rem)`,
+            height: getLineHeight(positions.length),
           }}
         ></div>
 
