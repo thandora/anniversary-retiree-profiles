@@ -21,19 +21,19 @@ function ProfileAvatar({ name, profileImage, hasPhoto, onImageClick }) {
   const initials = extractInitials(name);
 
   return (
-    <div className="w-full max-w-md mx-auto text-center">
+    <div className="w-full max-w-lg mx-auto text-center">
       {/* Name display - enhanced styling */}
-      <div className="space-y-2 mb-6">
-        <div className="text-3xl font-bold text-yellow-400 tracking-wide leading-tight px-2">
+      <div className="space-y-4 mb-8">
+        <div className="text-4xl font-bold text-yellow-400 tracking-wide leading-relaxed px-6 py-4">
           {name}
         </div>
       </div>
 
       {/* Decorative accent */}
       <div className="flex items-center justify-center">
-        <div className="w-12 h-px bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent"></div>
-        <div className="w-3 h-3 bg-yellow-400/70 rounded-full mx-3 animate-pulse"></div>
-        <div className="w-12 h-px bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent"></div>
+        <div className="w-16 h-px bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent"></div>
+        <div className="w-3 h-3 bg-yellow-400/70 rounded-full mx-4 animate-pulse"></div>
+        <div className="w-16 h-px bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent"></div>
       </div>
     </div>
   );
