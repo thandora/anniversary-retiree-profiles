@@ -1,7 +1,7 @@
 {
   "k8m3x9p2": {
     "name": "Christian Klint M. Labadia",
-    "profileImage": "../img/group_profile.jpg",
+    "profileImage": "./group_profile.jpg",
     "hasPhoto": true,
     "positions": [
       {

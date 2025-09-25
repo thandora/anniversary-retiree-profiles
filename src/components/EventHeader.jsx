@@ -3,7 +3,7 @@ function EventHeader() {
     <div className="text-center mb-8">
       <div className="mb-6">
         <img
-          src="../img/logo.png"
+          src="./logo.png"
           alt="Event Logo"
           className="size-28 mx-auto rounded-full border-2 border-yellow-400/30 shadow-lg p-2"
         />
