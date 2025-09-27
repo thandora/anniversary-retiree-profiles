@@ -8,6 +8,17 @@ export function isValidUUID(str) {
   return uuidRegex.test(str);
 }
 
+async function loadCSVData() {
+  try {
+    const { parseCSV } = await import('./csvParser');
+    const csvText = await import('../data/retireeData.csv?raw');
+    return parseCSV(csvText.default);
+  } catch (error) {
+    console.error('Error loading CSV data:', error);
+    throw error;
+  }
+}
+
 export function setQueryParam(param, value) {
   const url = new URL(window.location);
   url.searchParams.set(param, value);
@@ -26,8 +37,7 @@ export async function loadRetireeData(profileId) {
       throw new Error(`Invalid profile ID format: ${profileId}`);
     }
 
-    const module = await import('../data/retireeData.json');
-    const allData = module.default;
+    const allData = await loadCSVData();
 
     if (!allData[profileId]) {
       throw new Error(`Profile not found: ${profileId}`);
@@ -42,8 +52,7 @@ export async function loadRetireeData(profileId) {
 
 export async function getAvailableProfiles() {
   try {
-    const module = await import('../data/retireeData.json');
-    const allData = module.default;
+    const allData = await loadCSVData();
 
     return Object.keys(allData).map(id => ({
       id,
