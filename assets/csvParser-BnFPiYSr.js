@@ -1,0 +1,2 @@
+function a(i){const n=i.trim().split(`
+`),s=n[0].split(",").map(e=>e.trim()),r={};for(let e=1;e<n.length;e++){const t=c(n[e]);if(t.length>=s.length){const o=t[0],l={name:t[1],dateHired:t[2],dateRetired:t[3],position:t[4]};r[o]=l}}return r}function c(i){const n=[];let s="",r=!1;for(let e=0;e<i.length;e++){const t=i[e];t==='"'?r=!r:t===","&&!r?(n.push(s.trim()),s=""):s+=t}return n.push(s.trim()),n}export{a as parseCSV};
