@@ -26,3 +26,19 @@ export function formatServiceDuration({ years, months }) {
     ? `${years} Years, ${months} Months`
     : `${years} Years`;
 }
+
+export function formatDateReadable(dateString) {
+  if (!dateString) return '';
+
+  const date = new Date(dateString);
+
+  if (isNaN(date.getTime())) return dateString;
+
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit'
+  };
+
+  return date.toLocaleDateString('en-US', options);
+}

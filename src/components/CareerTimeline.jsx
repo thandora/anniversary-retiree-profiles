@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { formatDateReadable } from '../utils/dateUtils';
 
 function CareerDetails({ position, dateHired, dateRetired }) {
   return (
@@ -29,7 +30,7 @@ function CareerDetails({ position, dateHired, dateRetired }) {
             DATE HIRED
           </div>
           <div className="text-white text-lg font-semibold">
-            {dateHired}
+            {formatDateReadable(dateHired)}
           </div>
         </div>
 
@@ -38,7 +39,7 @@ function CareerDetails({ position, dateHired, dateRetired }) {
             DATE OF RETIREMENT
           </div>
           <div className="text-white text-lg font-semibold">
-            {dateRetired}
+            {formatDateReadable(dateRetired)}
           </div>
         </div>
       </div>
