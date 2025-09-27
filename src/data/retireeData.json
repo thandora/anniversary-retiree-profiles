@@ -1,180 +1,26 @@
 {
   "k8m3x9p2": {
     "name": "Christian Klint M. Labadia",
-    "profileImage": "./group_profile.png",
-    "hasPhoto": true,
-    "positions": [
-      {
-        "title": "Junior Child",
-        "startDate": "March 08, 1998",
-        "type": "start"
-      },
-      {
-        "title": "Elementary Intern",
-        "startDate": "June 01, 2009",
-        "type": "intermediate"
-      },
-      {
-        "title": "Intern",
-        "startDate": "August 2012",
-        "type": "intermediate"
-      },
-      {
-        "title": "Programming Officer",
-        "startDate": "April 01, 2024",
-        "endDate": "September 09, 2025",
-        "type": "final"
-      }
-    ]
+    "dateHired": "04/01/2024",
+    "dateRetired": "09/27/2025",
+    "position": "Programming Officer"
   },
   "f7n4w6z1": {
-    "name": "Chandler Bing",
-    "hasPhoto": false,
-    "positions": [
-      {
-        "title": "Junior Clerk",
-        "startDate": "June 15, 1975",
-        "type": "start"
-      },
-      {
-        "title": "Operations Manager",
-        "startDate": "August 20, 2005",
-        "endDate": "December 31, 2024",
-        "type": "final"
-      }
-    ]
+    "name": "Maria Elena Santos",
+    "dateHired": "06/15/1985",
+    "dateRetired": "12/31/2024",
+    "position": "Senior Administrative Assistant"
   },
-  "a3b5c7d9": {
-    "name": "Ross The John Doe Geller",
-    "hasPhoto": false,
-    "positions": [
-      {
-        "title": "Assistant Clerk",
-        "startDate": "March 10, 1985",
-        "type": "start"
-      },
-      {
-        "title": "Supervisor",
-        "startDate": "January 15, 1995",
-        "type": "intermediate"
-      },
-      {
-        "title": "Department Manager",
-        "startDate": "June 30, 2010",
-        "endDate": "August 15, 2025",
-        "type": "final"
-      }
-    ]
+  "q5j8r3v9": {
+    "name": "Roberto C. Fernandez",
+    "dateHired": "03/22/1980",
+    "dateRetired": "08/15/2024",
+    "position": "Maintenance Supervisor"
   },
-  "x5y7z9w1": {
-    "name": "Monica Geller",
-    "hasPhoto": false,
-    "positions": [
-      {
-        "title": "Trainee",
-        "startDate": "July 01, 1980",
-        "type": "start"
-      },
-      {
-        "title": "Junior Officer",
-        "startDate": "September 15, 1985",
-        "type": "intermediate"
-      },
-      {
-        "title": "Senior Officer",
-        "startDate": "March 20, 1992",
-        "type": "intermediate"
-      },
-      {
-        "title": "Assistant Manager",
-        "startDate": "November 10, 2000",
-        "type": "intermediate"
-      },
-      {
-        "title": "General Manager",
-        "startDate": "April 25, 2015",
-        "endDate": "October 31, 2025",
-        "type": "final"
-      }
-    ]
-  },
-  "p6q8r2t4": {
-    "name": "Rachel Green",
-    "hasPhoto": false,
-    "positions": [
-      {
-        "title": "Entry Level Clerk",
-        "startDate": "May 12, 1978",
-        "type": "start"
-      },
-      {
-        "title": "Clerk II",
-        "startDate": "August 05, 1983",
-        "type": "intermediate"
-      },
-      {
-        "title": "Senior Clerk",
-        "startDate": "February 18, 1988",
-        "type": "intermediate"
-      },
-      {
-        "title": "Supervisor",
-        "startDate": "October 22, 1995",
-        "type": "intermediate"
-      },
-      {
-        "title": "Assistant Manager",
-        "startDate": "January 14, 2005",
-        "type": "intermediate"
-      },
-      {
-        "title": "Operations Manager",
-        "startDate": "July 08, 2018",
-        "endDate": "December 20, 2025",
-        "type": "final"
-      }
-    ]
-  },
-  "m4n6b8v0": {
-    "name": "Teresita Niña R. Navarrete",
-    "hasPhoto": false,
-    "positions": [
-      {
-        "title": "Apprentice",
-        "startDate": "January 20, 1976",
-        "type": "start"
-      },
-      {
-        "title": "Junior Technician",
-        "startDate": "June 15, 1981",
-        "type": "intermediate"
-      },
-      {
-        "title": "Technician",
-        "startDate": "September 10, 1986",
-        "type": "intermediate"
-      },
-      {
-        "title": "Senior Technician",
-        "startDate": "March 25, 1992",
-        "type": "intermediate"
-      },
-      {
-        "title": "Technical Supervisor",
-        "startDate": "November 12, 1999",
-        "type": "intermediate"
-      },
-      {
-        "title": "Assistant Chief",
-        "startDate": "April 08, 2008",
-        "type": "intermediate"
-      },
-      {
-        "title": "Chief Technical Officer",
-        "startDate": "August 30, 2020",
-        "endDate": "November 15, 2025",
-        "type": "final"
-      }
-    ]
+  "h2d7m5x4": {
+    "name": "Carmen L. Rodriguez",
+    "dateHired": "09/10/1990",
+    "dateRetired": "06/30/2024",
+    "position": "Customer Service Representative"
   }
 }

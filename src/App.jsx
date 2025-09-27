@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   calculateServiceDuration,
   formatServiceDuration,
@@ -8,14 +8,12 @@ import { sparklePositions } from "./constants/sparklePositions";
 import Sparkle from "./components/Sparkle";
 import EventHeader from "./components/EventHeader";
 import ServiceDurationCard from "./components/ServiceDurationCard";
-import CareerTimeline from "./components/CareerTimeline";
+import CareerDetails from "./components/CareerTimeline";
 import AnniversaryInvitation from "./components/AnniversaryInvitation";
-import ImageModal from "./components/ImageModal";
 import ProfileAvatar from "./components/ProfileAvatar";
 import ProfileSelector from "./components/ProfileSelector";
 
 function RetireeProfile() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [retireeData, setRetireeData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -76,8 +74,8 @@ function RetireeProfile() {
   }
 
   const serviceDuration = calculateServiceDuration(
-    retireeData.positions[0].startDate,
-    retireeData.positions[retireeData.positions.length - 1].endDate
+    retireeData.dateHired,
+    retireeData.dateRetired
   );
   const serviceDurationText = formatServiceDuration(serviceDuration);
 
@@ -122,22 +120,14 @@ function RetireeProfile() {
             />
 
             <div className="relative z-10">
-              <ProfileAvatar
-                name={retireeData.name}
-                profileImage={retireeData.profileImage}
-                hasPhoto={retireeData.hasPhoto}
-                onImageClick={() => setIsModalOpen(true)}
-              />
-
-              {/* Only show name heading for profiles with photos */}
-              {retireeData.hasPhoto && (
-                <h2 className="text-3xl font-bold text-white text-center mb-3 tracking-wide leading-tight">
-                  {retireeData.name}
-                </h2>
-              )}
+              <ProfileAvatar name={retireeData.name} />
 
               <ServiceDurationCard serviceDurationText={serviceDurationText} />
-              <CareerTimeline positions={retireeData.positions} />
+              <CareerDetails
+                position={retireeData.position}
+                dateHired={retireeData.dateHired}
+                dateRetired={retireeData.dateRetired}
+              />
 
               <div className="mt-8 text-center">
                 <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mx-auto mb-4" />
@@ -167,14 +157,6 @@ function RetireeProfile() {
           </div>
         </div>
 
-        {retireeData.hasPhoto && (
-          <ImageModal
-            isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
-            imageSrc={retireeData.profileImage}
-            altText={retireeData.name}
-          />
-        )}
       </div>
     </div>
   );
