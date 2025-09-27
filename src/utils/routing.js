@@ -3,6 +3,11 @@ export function getQueryParam(param) {
   return urlParams.get(param);
 }
 
+export function isValidUUID(str) {
+  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+  return uuidRegex.test(str);
+}
+
 export function setQueryParam(param, value) {
   const url = new URL(window.location);
   url.searchParams.set(param, value);
@@ -17,6 +22,10 @@ export function removeQueryParam(param) {
 
 export async function loadRetireeData(profileId) {
   try {
+    if (!isValidUUID(profileId)) {
+      throw new Error(`Invalid profile ID format: ${profileId}`);
+    }
+
     const module = await import('../data/retireeData.json');
     const allData = module.default;
 
