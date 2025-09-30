@@ -1,6 +1,16 @@
 export function calculateServiceDuration(startDate, endDate) {
+  // Handle missing dates
+  if (!startDate || !endDate) {
+    return null;
+  }
+
   const start = new Date(startDate);
   const end = new Date(endDate);
+
+  // Handle invalid dates
+  if (isNaN(start.getTime()) || isNaN(end.getTime())) {
+    return null;
+  }
 
   let years = end.getFullYear() - start.getFullYear();
   let months = end.getMonth() - start.getMonth();
@@ -21,7 +31,12 @@ export function calculateServiceDuration(startDate, endDate) {
   return { years, months };
 }
 
-export function formatServiceDuration({ years, months }) {
+export function formatServiceDuration(serviceDuration) {
+  if (!serviceDuration) {
+    return null;
+  }
+
+  const { years, months } = serviceDuration;
   return months > 0
     ? `${years} Years, ${months} Months`
     : `${years} Years`;

@@ -79,6 +79,9 @@ function RetireeProfile() {
   );
   const serviceDurationText = formatServiceDuration(serviceDuration);
 
+  // Check if this retiree has incomplete records (name only)
+  const hasIncompleteRecords = !retireeData.dateHired && !retireeData.dateRetired && !retireeData.position;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
       {sparklePositions.map((position, index) => (
@@ -122,26 +125,48 @@ function RetireeProfile() {
             <div className="relative z-10">
               <ProfileAvatar name={retireeData.name} />
 
-              <ServiceDurationCard serviceDurationText={serviceDurationText} />
-              <CareerDetails
-                position={retireeData.position}
-                dateHired={retireeData.dateHired}
-                dateRetired={retireeData.dateRetired}
-              />
+              {hasIncompleteRecords ? (
+                // Layout for incomplete records (name only)
+                <div className="mt-8 text-center">
+                  <div className="bg-gray-800/50 rounded-lg p-8 border border-yellow-400/20 mb-6">
+                    <div className="text-yellow-400/60 text-sm font-medium tracking-wide mb-3">
+                      HONORED RETIREE
+                    </div>
+                    <div className="text-gray-300 text-base leading-relaxed italic">
+                      Your service and dedication to LEYECO II remain cherished in our institutional memory.
+                    </div>
+                  </div>
+                  <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mx-auto mb-4" />
+                  <p className="text-gray-300 text-base leading-relaxed">
+                    Thank you for your unwavering dedication to{" "}
+                    <span className="whitespace-nowrap">LEYECO II</span>. Your contributions have been invaluable to our success, illuminating the path forward and embodying the values that define who we are.
+                  </p>
+                </div>
+              ) : (
+                // Standard layout with complete records
+                <>
+                  <ServiceDurationCard serviceDurationText={serviceDurationText} />
+                  <CareerDetails
+                    position={retireeData.position}
+                    dateHired={retireeData.dateHired}
+                    dateRetired={retireeData.dateRetired}
+                  />
 
-              <div className="mt-8 text-center">
-                <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mx-auto mb-4" />
-                <p className="text-gray-300 text-base leading-relaxed">
-                  Thank you for your unwavering dedication to{" "}
-                  <span className="whitespace-nowrap">LEYECO II</span>. Your{" "}
-                  <span className="text-yellow-400">
-                    {serviceDurationText.toLowerCase()}
-                  </span>{" "}
-                  of service have been invaluable to our success, illuminating
-                  the path forward and embodying the values that define who we
-                  are.
-                </p>
-              </div>
+                  <div className="mt-8 text-center">
+                    <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mx-auto mb-4" />
+                    <p className="text-gray-300 text-base leading-relaxed">
+                      Thank you for your unwavering dedication to{" "}
+                      <span className="whitespace-nowrap">LEYECO II</span>. Your{" "}
+                      <span className="text-yellow-400">
+                        {serviceDurationText.toLowerCase()}
+                      </span>{" "}
+                      of service have been invaluable to our success, illuminating
+                      the path forward and embodying the values that define who we
+                      are.
+                    </p>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
