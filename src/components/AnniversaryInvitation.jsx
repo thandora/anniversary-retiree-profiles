@@ -39,7 +39,7 @@ function AnniversaryInvitation() {
                   <span className="text-yellow-400 text-lg">📍</span>
                 </div>
                 <div className="text-left">
-                  <div className="text-white font-semibold">Humans Center</div>
+                  <div className="text-white font-semibold">People's Center</div>
                   <div className="text-gray-300 text-sm">Venue</div>
                 </div>
               </div>
