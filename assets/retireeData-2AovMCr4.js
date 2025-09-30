@@ -16,18 +16,18 @@ c4d35cfe-2c65-42e0-8984-5713d80969fe,Carmencita G. Cinco,11/02/1983,06/14/2020,A
 019ae547-a1c5-4870-a48c-501c186447cf,Corazon V. Gaspay,11/25/1986,07/31/2012,Bookkeeper\r
 56728d6d-6753-463e-842e-c1c1c6592f4d,Damaso P. Lalap,10/21/1991,12/11/2013,Messenger\r
 caa21297-b4d5-4028-91f5-cdbf3b2375ea,Dante Asirit,07/01/2000,08/31/2018,Lineman\r
-efe0ee2b-8d1d-47ec-98d2-b9c325da82ca,Dominic A. Gastones,02/17/1997,04/01/2024,Calibrator\r
+efe0ee2b-8d1d-47ec-98d2-b9c325da82ca,Dominic A. Gastones,02/17/1997,04/01/2024,Calibration & Testing Specialist\r
 ecbdc00b-91b8-4626-a74b-d94d7f63746e,Edgardo J. Armerola,08/19/1991,01/31/2003,Lineman\r
 da126617-2165-41e7-953f-77da84a9ee79,Eduardo D. Quejada,12/10/1991,10/19/2018,Lineman\r
 786368de-8e02-4e33-b668-946557735365,Efigenia C. Villas,04/04/1989,09/21/2023,Billing Officer\r
-3b18d953-c522-4cfc-9c26-2236a48541b0,Efren Gabriola,11/22/1986,12/24/2023,General Services Section Head\r
+3b18d953-c522-4cfc-9c26-2236a48541b0,Efren M. Gabriola,11/22/1986,12/24/2023,General Services Section Head\r
 84d8a6d0-4d63-4a76-8b2e-eff7fd17aba4,Efren S. Molino,07/07/1980,03/24/2014,Meter Reader / Collector\r
 ee31ea95-630d-4b84-b58e-0536f33411a4,Elmero C. Dueñas,01/11/1990,12/31/2022,Teller\r
 5883830d-93da-4c78-b22b-9e10f6a3ffc7,Emelio O. Valera,03/16/1992,10/15/2013,Driver\r
 f7a899d4-bf48-4ef5-807a-cbd358768255,Feliciano M. Briones,10/01/1993,11/11/2012,Driver\r
 15e749f3-77e6-4f0a-a4fe-2909698352dd,Felizardo A. Ravelo,04/01/1992,12/31/2015,Driver / Lineman\r
 58a5bbe4-75a9-4ed0-8639-64275291d4ce,Fidela P. Clor,12/01/1975,10/31/2008,Teller\r
-a6525301-1584-4386-8084-c621e2979e1d,Gil L. Varona,11/13/1994,11/09/2023,Meter Reader\r
+a6525301-1584-4386-8084-c621e2979e1d,Gil L. Varona,11/13/1994,11/09/2023,Meter Reading Specialist\r
 35c0c0b0-89dd-4f69-bf3f-8a9eebcb235b,Godofredo G. Garcia,07/07/1980,11/08/2017,Material & Equipment Section Head\r
 0a67f602-6436-4eb3-99ff-93c3b873650c,Henry P. Mendoza,10/04/1993,11/03/2020,Lineman\r
 533d8484-e1dd-4bdf-9217-415ccb4e14c0,Jesus L. Miñano,03/01/1983,03/30/2019,Meter Reader / Collector\r
@@ -71,12 +71,12 @@ ce80d979-9362-4194-a890-709904700197,Demetria A. Ramos,12/16/1975,07/16/2002,Ope
 c97d60e8-589f-4c8b-b209-50a23fdd16ee,Emmanuel R. Sabela,02/17/1992,06/30/2011,Lineman\r
 3b37b51b-c0db-40cd-94c7-88c5f9d201fd,Glenyss R. Presnilla,10/25/1993,05/01/2016,Information & Training Officer / Consumer Welfare Desk Officer\r
 87bc29d8-23e1-4efb-84c9-84dbab007f78,Ma. Diadema C. Veloso,07/09/2007,07/31/2021,General Accounting & Asset Management Section Head\r
-3830109c-b3d5-4033-8359-794e06601713,Agnes G. Lago,12/01/1998,10/01/2021,General Accounting & Cashiering Division Manager\r
+3830109c-b3d5-4033-8359-794e06601713,Agnes G. Lago,12/01/1998,10/01/2021,General Accounting & Cashiering Division Supervisor\r
 c3c4289b-2e8e-4966-8865-057713627ac8,Teresita Niña R. Navarrete,09/22/1993,04/16/2013,Information & Training Officer / Consumer Welfare Desk Officer\r
 29e55f90-f673-4c75-a882-dc401bbb211a,Thelma A. Cabillo,05/25/1981,11/28/2012,Line Controller\r
 09ca74d2-2ffc-4118-9822-6118d07fda93,"Nestor P. Basilan, Jr.",05/18/2000,01/31/2020,Stock Clerk\r
 c04a4027-be7c-4e2b-8bdd-a3941fa53755,Allan Badidles,08/18/1997,12/31/2024,Boomtruck Operator - Area Office - Palo\r
-9a202ea0-8647-497b-ac5c-321f27bfaf11,Rodolfo Cerillo,04/20/1996,12/31/2024,MCO/Communication Specialist\r
+9a202ea0-8647-497b-ac5c-321f27bfaf11,Rodolfo B. Cerillo,04/20/1996,12/31/2024,MCO/Communication Specialist\r
 73dce076-77df-48f6-9ccd-98a158c75b4a,Gil T. Caidic,09/01/1992,07/01/2025,Technical Services Department Manager\r
 40c79984-bec7-43c2-827a-835fa429ae7a,Christopher A. Garcia,07/20/1995,07/01/2025,Institutional Services Department Manager\r
 0c8b9395-d2f3-4b9f-96b9-f0e2caa09f50,Solita A. Empillo,12/16/1975,06/23/1999,FSD Manager\r
@@ -86,4 +86,15 @@ bcabd2b7-480b-4f27-8651-57ad4167cfb5,Jerry Gwen L. Conde,11/07/1994,06/19/2012,G
 fe36cffd-80ad-451e-bde3-2686b4941f4d,Monina Mercia A. Del Pilar,03/17/1989,09/08/2006,Operations Audit Section Head\r
 21cee874-0597-4c06-b036-946e439be9b6,"Vicente C. Majadillas, Jr.",06/01/1977,12/31/2012,OIC General Manager/ Technical Services Dept. Manager\r
 c88a08b3-e26b-4770-bdcc-ee915527a366,Arnold B. Zalavarria,03/07/1995,05/09/2002,Meter Reader\r
-7b012795-951a-49a5-8554-1634b1d4220c,Edson G. Piczon,05/02/2008,11/30/2023,Board Secretary`;export{e as default};
+7b012795-951a-49a5-8554-1634b1d4220c,Edson G. Piczon,05/02/2008,11/30/2023,Legal Services Manager\r
+c50e5d6a-69a0-4361-a291-ed177aa29a2b,Rodrigo Bernas,,,\r
+e92ba522-a079-4bc1-b659-aae93ed06354,Sonia Salvacion,,,\r
+225ca2df-02b7-4b4c-9574-c0d86547894d,Benedicto Balmes,,,\r
+53c722ae-dc9f-4fb5-866d-ffdd9fe76a53,Alex B. Villar,03/01/1983,08/31/2002,Staking Officer\r
+0d52f66d-cefa-41c0-a94d-709c6defad71,Catalina A. Salinas (Canada),06/28/1974,03/31/1999,Records Officer\r
+1ece7020-a3b1-4858-b15c-5151374e2070,Sonia T. Tamparia,05/16/1981,11/30/2008,Meter Reader / Collector Section Head\r
+d1e9b9a8-c9c4-4a28-9340-7cfd3cbe586f,"Wenceslao A. Estojero, Jr.",03/01/1998,11/03/2013,Lineman\r
+901a82da-0035-4ef9-8e28-0c0b6008b649,Levita S. Calamaya,11/02/1983,07/15/2014,Teller\r
+a3199752-9af8-4cb5-a90a-d6275521bac0,Edmundo Cañete ,10/16/1996,12/31/2009,SBA Clerk\r
+f318bafe-6759-4400-8f86-05da9f2208c9,Jose M. Pilola,06/28/1974,07/15/2002,Meter Reader\r
+`;export{e as default};
