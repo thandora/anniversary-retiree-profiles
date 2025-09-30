@@ -87,9 +87,6 @@ fe36cffd-80ad-451e-bde3-2686b4941f4d,Monina Mercia A. Del Pilar,03/17/1989,09/08
 21cee874-0597-4c06-b036-946e439be9b6,"Vicente C. Majadillas, Jr.",06/01/1977,12/31/2012,OIC General Manager/ Technical Services Dept. Manager\r
 c88a08b3-e26b-4770-bdcc-ee915527a366,Arnold B. Zalavarria,03/07/1995,05/09/2002,Meter Reader\r
 7b012795-951a-49a5-8554-1634b1d4220c,Edson G. Piczon,05/02/2008,11/30/2023,Legal Services Manager\r
-c50e5d6a-69a0-4361-a291-ed177aa29a2b,Rodrigo Bernas,,,\r
-e92ba522-a079-4bc1-b659-aae93ed06354,Sonia Salvacion,,,\r
-225ca2df-02b7-4b4c-9574-c0d86547894d,Benedicto Balmes,,,\r
 53c722ae-dc9f-4fb5-866d-ffdd9fe76a53,Alex B. Villar,03/01/1983,08/31/2002,Staking Officer\r
 0d52f66d-cefa-41c0-a94d-709c6defad71,Catalina A. Salinas (Canada),06/28/1974,03/31/1999,Records Officer\r
 1ece7020-a3b1-4858-b15c-5151374e2070,Sonia T. Tamparia,05/16/1981,11/30/2008,Meter Reader / Collector Section Head\r
